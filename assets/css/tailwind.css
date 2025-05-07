@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading {
+  @apply font-bold text-[22px] leading-[150%] lg:text-4xl;
+}
+
+.subheading {
+  @apply font-semibold text-lg leading-[150%] lg:text-[22px];
+}

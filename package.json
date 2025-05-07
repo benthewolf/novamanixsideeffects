@@ -1,0 +1,32 @@
+{
+  "name": "novamanixsideeffects",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">     <a href=\"https://github.com/yiisoft\" target=\"_blank\">         <img src=\"https://avatars0.githubusercontent.com/u/993323\" height=\"100px\">     </a>     <h1 align=\"center\">Yii 2 Basic Project Template</h1>     <br> </p>",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./web/css/tailwind-output.css --minify",
+    "dev": "npx tailwindcss -i ./assets/css/tailwind.css -o ./web/css/tailwind-output.css  --watch",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:views": "onchange 'views/**'",
+    "watch:sass": "sass  --no-source-map --watch src/scss:public_html/css",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start  --proxy \"localhost:8080\" --files \"public_html/css/*.css\" views/** modules/store/views/**",
+    "postbuild": "postcss public_html/css/*.css -u cssnano -r --no-map",
+    "web:server": "php yii serve 0.0.0.0 -t public_html",
+    "web:prepare": "npm-run-all --parallel watch serve",
+    "start": "concurrently  npm:web:*",
+    "tunnel": "lt -p 8080 -o --print-requests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}
