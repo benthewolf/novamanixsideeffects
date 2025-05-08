@@ -75,16 +75,6 @@ class SiteController extends Controller
         $sec11 = LandingPageHelper::getSection11();
         return $this->render('index', compact(
             'sec1',
-            'sec2',
-            'sec3',
-            'sec4',
-            'sec5',
-            'sec6',
-            'sec7',
-            'sec8',
-            'sec9',
-            'sec10',
-            'sec11'
         ));
     }
 

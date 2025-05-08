@@ -9,3 +9,30 @@
 .subheading {
   @apply font-semibold text-lg leading-[150%] lg:text-[22px];
 }
+
+.green-sb-text {
+  @apply font-semibold text-[#03AB00] leading-[150%] text-3xl;
+}
+
+section {
+  font-family: "Poppins", sans-serif;
+  font-family: family/text;
+  letter-spacing: -2%;
+  line-height: 150%;
+}
+
+/* ORDER DISPLAY AND HIDE */
+
+input[name="product_id"] {
+  display: none;
+}
+
+input[name="product_id"] + label .product_normal,
+input[name="product_id"]:checked + label .product_selected {
+  display: block;
+}
+
+input[name="product_id"]:checked + label .product_normal,
+input[name="product_id"] + label .product_selected {
+  display: none;
+}
