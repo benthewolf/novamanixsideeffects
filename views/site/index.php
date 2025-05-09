@@ -5,6 +5,12 @@
     use app\components\widgets\Products;
 
     ?>
+
+ <section>
+     <div class="container mx-auto max-w-[1170px] py-[50px]">
+     </div>
+ </section>
+
  <section>
      <div class="container mx-auto max-w-[1170px] py-[50px]">
 
@@ -20,16 +26,41 @@
          </div>
 
          <div class="space-y-[30px] mx-auto flex flex-col">
-             <?= Products::widget([
-                    'src' => $sec17['image'],
-                    'fallback' => $sec17['imageFallback'],
-                    'srcMobile' => $sec17['imagemb'],
-                    'fallbackMobile' => $sec17['imageFallbackmb'],
-                    'alt' => 'bottle',
-                    'loading' => false,
-                    'imgClass' => 'lg:!w-[900px] xl:w-[900px] mx-auto lg:scale-[1.4] xl:scale-none',
-                    'pictureClass' => 'absolute mx-auto sm:static xl:absolute w-full lg:!w-[900px] xl:w-[900px] xl:!-top-50 xl:-left-60 -z-0'
-                ]) ?>
+             <?php foreach ($loopselection as $key => $products): ?>
+                 <?php
+                    // Build the widget options array in a variable
+                    $params = [
+                        'src' => $products['image'],
+                        'fallback' => $products['fallbackImage'],
+                        'selsrc' => $products['imageSelected'],
+                        'selFallback' => $products['fallbackImageSelected'],
+                        'alt' => 'Silver Package',
+                        'ppcode' => $products['pp_code'],
+                        'damount' => $products['amount'],
+                        'dname' => $products['name'],
+                        'dsubname' => $products['alt'],
+                        'dproducts' => 'Novamanix',
+                        'dmonth' => $products['data-month'],
+                        'dmonthintext' => $products['data-month-text'],
+                        'normalamount' => $products['normal-amount'],
+                        'saveamount' => $products['data-month-text'],
+                        'prodidvalue' => $products['save'],
+                        'prodid' => $products['prod-id'],
+                        'labelclass' => 'block cursor-pointer my-[24px] md:mb-[40px]',
+                        'pictureClass' => '',
+                        'imgClass' => 'w-full',
+                        'prodthumb' => '',
+                    ];
+
+                    // Conditionally add 'selected' if key === 3
+                    if ($key === 2) {
+                        $params['selected'] = 'checked';
+                    }
+                    ?>
+
+                 <!-- Now pass that array to the widget -->
+                 <?= Products::widget($params) ?>
+             <?php endforeach; ?>
          </div>
 
      </div>

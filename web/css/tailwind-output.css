@@ -635,12 +635,12 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.ml-\[66px\] {
-  margin-left: 66px;
-}
-
 .mb-\[60px\] {
   margin-bottom: 60px;
+}
+
+.ml-\[66px\] {
+  margin-left: 66px;
 }
 
 .block {
@@ -781,12 +781,6 @@ video {
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
-.space-y-\[60px\] > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(60px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(60px * var(--tw-space-y-reverse));
-}
-
 .space-y-\[30px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(30px * calc(1 - var(--tw-space-y-reverse)));
@@ -801,10 +795,6 @@ video {
   border-radius: 9999px;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
@@ -812,11 +802,6 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.border-red-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity, 1));
 }
 
 .\!bg-\[\#f8d7da\] {
@@ -895,6 +880,11 @@ video {
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-\[10px\] {
   font-size: 10px;
 }
@@ -916,11 +906,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .font-medium {
   font-weight: 500;
 }
@@ -929,21 +914,18 @@ video {
   font-weight: 600;
 }
 
-.leading-\[125\%\] {
-  line-height: 125%;
-}
-
 .leading-\[150\%\] {
   line-height: 150%;
-}
-
-.-tracking-\[2\%\] {
-  letter-spacing: -2%;
 }
 
 .text-\[\#00AEFF\] {
   --tw-text-opacity: 1;
   color: rgb(0 174 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#03AB00\] {
+  --tw-text-opacity: 1;
+  color: rgb(3 171 0 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#842029\] {
@@ -959,11 +941,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#03AB00\] {
-  --tw-text-opacity: 1;
-  color: rgb(3 171 0 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -1036,6 +1013,22 @@ section {
   font-family: family/text;
   letter-spacing: -2%;
   line-height: 150%;
+}
+
+/* ORDER DISPLAY AND HIDE */
+
+input[name="product_id"] {
+  display: none;
+}
+
+input[name="product_id"] + label .product_normal,
+input[name="product_id"]:checked + label .product_selected {
+  display: block;
+}
+
+input[name="product_id"]:checked + label .product_normal,
+input[name="product_id"] + label .product_selected {
+  display: none;
 }
 
 @media (max-width: 390px) {

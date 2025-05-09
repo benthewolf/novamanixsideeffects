@@ -21,21 +21,11 @@ class Products extends Widget
     public $desktopSize = '1024px';
     public $mobileSize = '1023px';
 
-    // Default
+    // Selected
     public $selsrc = null;
-    public $selsrcType = 'webp';
-    public $selfallback = null;
-    public $selfallbackType = 'png';
     public $selsrcMobile = null;
-    public $selsrcMobileType = 'webp';
+    public $selFallback = null;
     public $selfallbackMobile = null;
-    public $selfallbackMobileType = 'png';
-    public $selpictureClass = null;
-    public $selimgClass = null;
-    public $selalt = null;
-    public $selloading = true;
-    public $seldesktopSize = '1024px';
-    public $selmobileSize = '1023px';
 
     //Data attributes
     public $ppcode = null;
@@ -51,6 +41,7 @@ class Products extends Widget
     public $prodidvalue = null;
     public $prodid = null;
     public $labelclass = null;
+    public $selected = null;
 
 
     public function run()
@@ -70,20 +61,8 @@ class Products extends Widget
             'loading' => $this->loading,
             'desktopSize' => $this->desktopSize,
             'mobileSize' => $this->mobileSize,
-            'selsrc' => $this->selsrc,
-            'selsrcType' => $this->selsrcType,
-            'selfallback' => $this->selfallback,
-            'selfallbackType' => $this->selfallbackType,
-            'selsrcMobile' => $this->selsrcMobile,
-            'selsrcMobileType' => $this->selsrcMobileType,
-            'selfallbackMobile' => $this->selfallbackMobile,
-            'selfallbackMobileType' => $this->selfallbackMobileType,
-            'selpictureClass' => $this->selpictureClass,
-            'selimgClass' => $this->selimgClass,
-            'selalt' => $this->selalt,
-            'selloading' => $this->selloading,
-            'seldesktopSize' => $this->seldesktopSize,
-            'selmobileSize' => $this->selmobileSize,
+
+            // Data
             'ppcode' => $this->ppcode,
             'damount' => $this->damount,
             'dname' => $this->dname,
@@ -97,6 +76,13 @@ class Products extends Widget
             'prodidvalue' => $this->prodidvalue,
             'prodid' => $this->prodid,
             'labelclass' => $this->labelclass,
+
+            // Selected State
+            'selsrc' => $this->selsrc,
+            'selsrcMobile' => $this->selsrcMobile,
+            'selFallback' => $this->selFallback,
+            'selfallbackMobile' => $this->selfallbackMobile,
+            'selected' => $this->selected,
         ]);
     }
 }

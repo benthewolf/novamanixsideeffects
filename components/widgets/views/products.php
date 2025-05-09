@@ -15,7 +15,7 @@
     data-sub_name="<?= $dsubname ?>"
     data-products="<?= $dproducts ?>"
     data-product_thumb="<?= $prodthumb ?>"
-    data-month="<?= $dmonth ?>"
+    data-month="<?= $dmonth ?>" <?= $selected; ?>
     data-month_text="<?= $dmonthintext ?>"
     data-normal_amount="<?= $normalamount ?>"
     data-save_amount="<?= $saveamount ?>"
@@ -26,7 +26,7 @@
     for="<?= $prodid ?>">
 
     <!-- DEFAULT IMAGE -->
-    <picture class="<?= $pictureClass ?>">
+    <picture class="<?= $pictureClass ?> product_normal">
         <source srcset="<?= $src ?>" type="image/<?= $srcType ?>"
             <?= $srcMobile ? "media=\"(min-width: {$desktopSize})\"" : '' ?>>
 
@@ -47,24 +47,24 @@
     </picture>
 
     <!-- SELECTED IMAGE -->
-    <picture class="<?= $selpictureClass ?>">
-        <source srcset="<?= $src ?>" type="image/<?= $selsrcType ?>"
-            <?= $selsrcMobile ? "media=\"(min-width: {$seldesktopSize})\"" : '' ?>>
+    <picture class="<?= $pictureClass ?> product_selected">
+        <source srcset="<?= $selsrc ?>" type="image/<?= $srcType ?>"
+            <?= $selsrcMobile ? "media=\"(min-width: {$desktopSize})\"" : '' ?>>
 
         <?php if ($selsrcMobile): ?>
             <?php if ($selfallback): ?>
-                <source srcset="<?= $selfallback ?>" type="image/<?= $selfallbackType ?>"
-                    media="(min-width: <?= $seldesktopSize ?>)">
+                <source srcset="<?= $selfallback ?>" type="image/<?= $fallbackType ?>"
+                    media="(min-width: <?= $desktopSize ?>)">
             <?php endif; ?>
 
-            <source srcset="<?= $selsrcMobile ?>" type="image/<?= $selsrcMobileType ?>"
-                media="(max-width: <?= $selmobileSize ?>)">
+            <source srcset="<?= $selsrcMobile ?>" type="image/<?= $srcMobileType ?>"
+                media="(max-width: <?= $mobileSize ?>)">
         <?php endif; ?>
 
         <img src="<?= $selsrcMobile ? ($selfallbackMobile ?? $selsrcMobile) : ($selfallback ?? $selsrc) ?>"
-            alt="<?= $selalt ?>"
-            class="<?= $selimgClass ?>"
-            loading="<?= $selloading ? 'lazy' : 'eager' ?>">
+            alt="<?= $alt ?>"
+            class="<?= $imgClass ?>"
+            loading="<?= $loading ? 'lazy' : 'eager' ?>">
     </picture>
 
 
