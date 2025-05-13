@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         pop: ["Poppins", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       colors: {
         yellowpad: "#F3F0E9",

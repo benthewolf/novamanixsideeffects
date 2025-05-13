@@ -3,10 +3,10 @@
 <html lang="<?= Yii::$app->language ?>">
 
 <head>
-    <?php $this->registerCssFile('@web/css/tailwind-output.css?v=1.2'); ?>
+    <?php $this->registerCssFile('@web/css/tailwind-output.css'); ?>
     <?php $this->registerCssFile('@web/css/fonts.css'); ?>
-    <link rel="preload" href="/images/secondary/webp/bannermb.webp" as="image">
-    <link rel="preload" href="/images/secondary/webp/banner.webp" as="image">
+    <link rel="preload" href="/images/progen/webp/bannermb.webp" as="image">
+    <link rel="preload" href="/images/progen/webp/banner.webp" as="image">
     <!-- Google Tag Manager -->
     <script>
         let gtmLoaded = false;
@@ -54,14 +54,14 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- <?php echo $this->render('navbar'); ?> -->
+    <?php echo $this->render('navbar'); ?>
 
 
     <div class="page-wrapper" style="min-height: 70vh">
         <?= $content ?>
     </div>
 
-    <!-- <?php echo $this->render('footer'); ?> -->
+    <?php echo $this->render('footer'); ?>
 
     <?php
     unset($_GET['url']);

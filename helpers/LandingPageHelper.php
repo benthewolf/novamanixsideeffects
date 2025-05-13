@@ -43,7 +43,7 @@ class LandingPageHelper
         return (
             [
                 'subheading' => 'What are the Novamanix Side Effects?',
-                'p' => 'Novamanix is specially engineered to have a balanced formula to avoid side effects.The intended purpose of Novamanix is to help men reach the nutritional requirements to produce penis enlargement results. You may consider having an increased sexual appetite and a sturdy erection as good ‘side effects’ as the formula produces these benefits as well for the user. With negative side effects, however, we are proud to say that the balanced formula of Novamanix has virtually nullified the risks of developing side effects in healthy individuals.',
+                'p' => 'Novamanix is specially engineered to have a balanced formula to avoid side effects.The intended purpose of <u class="cursor-pointer">Novamanix</u> is to help men reach the nutritional requirements to produce penis enlargement results. You may consider having an increased sexual appetite and a sturdy erection as good ‘side effects’ as the formula produces these benefits as well for the user. With negative side effects, however, we are proud to say that the balanced formula of Novamanix has virtually nullified the risks of developing side effects in healthy individuals.',
                 'svg' => [
                     self::svg('sec1svg1.svg'),
                     self::svg('sec1svg2.svg'),
@@ -110,7 +110,13 @@ class LandingPageHelper
                     'Improved erectile quality',
                     'Decreased sexual downtime',
                     'Increased sexual performance'
-                ]
+                ],
+                'svg' => [
+                    self::svg('sec4svg1.svg'),
+                    self::svg('sec4svg2.svg'),
+                    self::svg('sec4svg3.svg'),
+                    self::svg('sec4svg4.svg')
+                ],
 
             ]
         );
@@ -292,7 +298,9 @@ class LandingPageHelper
                 'p' => [
                     'NovaManix offers a 90-day money-back guarantee on purchases made on our official website. We are fully confident that NovaManix will meet and exceed your expectations, which is why we have prepared a guarantee to show you how much we believe in our brand.',
                     'We have poured countless man hours into developing NovaManix, and it would be a pleasure to share the experience with our customers. However, if you feel that NovaManix failed to live up to your expectations, simply give us a call, and our customer care staff will help you process your refund right away.'
-                ]
+                ],
+                'image' => self::landingwebp('satisfaction.webp'),
+                'fallbackImage' => self::landingpng('satisfaction.png'),
             ]
         );
     }
@@ -311,6 +319,101 @@ class LandingPageHelper
         );
     }
 
+    public static function getFaq()
+    {
+        return ([
+            'subheading' => 'Novamanix Side Effects FAQ',
+            'p' => 'Do you have questions for us? See the most frequently asked questions of our customers and our answers in our FAQ page. If you do not see the answer to your question on the list below, feel free to contact us and we’ll get back to you as soon as possible.',
+            'list' => [
+                [
+                    'subheading' => 'What are the Novamanix Side Effects?',
+                    'p' => 'Novamanix is specially engineered to have a balanced formula to avoid side effects. The intended purposNovamanix Advantage is to help men reach the nutritional requirements to produce penis enlargement results. You may consider having an increased sexual appetite and a sturdy erection as good ‘side effects’ as the formula produces these benefits as well for the user. With negative side effects, however, we are proud to say that the balanced fNovamanix Novamanix has virtually nullified the risks of developing side effects in healthy individuals.'
+                ],
+                [
+                    'subheading' => 'Is Novamanix safe to take?',
+                    'p' => 'Novamanix is generally safe to take, with minimal side effects due to outside factors such as medicine, and other health conditions that may affect the interaction of the formNovamanix Advantage works on the body’s circulatory system and hormones. If you have been diagnosed with a chronic health condition related to the circulatory system such as hypertension, diabetes, or high cholesterol, you should seek the advice of a health professional befoNovamanix Novamanix or any other supplement.'
+                ],
+                [
+                    'subheading' => 'How big can I get with Novamanix?',
+                    'p' => 'The increase in penis size varies depending on a lot of factors. But you can be sure that by taking Novamanix, you can increase your penis size. Based on the studies we have conducteNovamanix Advantage, the average size increase is about 2 inches after taking the product regularly for 8 weeks. The biggest increase we have recorded so far is a 4.5 inch improvement from a starting point of 5.3 inches erect penis. Based on our research, our customers experience a significant increase in penis size aftNovamanix Novamanix regularly for at least 14 days.'
+                ],
+                [
+                    'subheading' => 'What’s the best way to take Novamanix?',
+                    'p' => 'To make the most out of your Novamanix supplementation, we advise our customers to take two pillNovamanix Advantage in the morning preferably on an empty stomacNovamanix Novamanix on an empty stomach will allow for a quick absorption of the nutrients, and allow a delayed-release mechanism to make the formula active and ready for the rest of the day. If you want an additional kick to your sexual performance, you can simply take aNovamanixll of Novamanix about an hour before having sex to improve hardness, libido, and sexual endurance.'
+                ],
+                [
+                    'subheading' => 'Is Novamanix a scam?',
+                    'p' => 'No. Novamanix was developed through years of hard work from our experts and staff, and we are very much invested in the product itself. We believe that the reputation of the brand we have worked so hard to establish is more important than getting easy money off of scams. You can count on us to have a trustworthy, transparent, and honest professional approach to the people we do business with.'
+                ],
+                [
+                    'subheading' => 'Is Novamanix offered outside of the United States?',
+                    'p' => 'Currently, Novamanix is offered also in the United Kingdom and in Canada. We have yet to establish shipping in countries outside of our current scope, but given the rising popularitNovamanix Advantage, we are now receiving offers to dNovamanix Novamanix in other locations. Check with your local supplement providerNovamanixoffer Novamanix. If not, you can refer them to our website so we can workNovamanixl to bring Novamanix closer to you.'
+                ],
+                [
+                    'subheading' => 'Does Novamanix offer money-back guarantees?',
+                    'p' => 'Absolutely. We are fully confident that Novamanix will be able to meet and exceed your expectations. That’s why we have placed a guarantee on your purchase Novamanix Advantage. If you Novamanix Novamanix is unsatisfactory to your standards, you can simply give us a call, and our customer care staff will help you process your refund. It’s that easy!'
+                ],
+            ],
+        ]);
+    }
+
+    public static function getTestimonials()
+    {
+        return ([
+            'heading' => 'Novamanix Side Effects Testimonials',
+            'testimonials' => [
+                [
+                    'subheading' => 'Novamanix is my first choice.',
+                    'p' => 'Given that this is my first time to buy male enhancement supplements, I did my research and found that Novamanix really has everything in order, from the science and dosage, everything lines up perfectly. I’m a bit cautious to what I put into my body, and I’m proud to say that I have not experiencedNovamanix Advantage side effects whatsoever. Even more impressive is that it really does what it says on the website. I got bigger, and I got betteNovamanix Novamanix is the real deal!',
+                    'name' => 'Bernard S.',
+                    'loc' => 'El Paso, TX'
+                ],
+                [
+                    'subheading' => 'Novamanix made me a stud.',
+                    'p' => 'I’m a nerdy college guy, not the kind of guy that’s really popular with women in the University. I ordered Novamanix online about a month ago, and it changed everything for me. I gained two inches on my penis, and my libido is at an all-time high. I just can’t believe it. My confidence grew each day, and I was able to pick up women and have hot, sweaty sex all night. The best part is, I now have the reputation for being hung – and every girl in the University is curious. All that for a pill. What a time to be alive!',
+                    'name' => 'Luke I.',
+                    'loc' => 'Los Angeles, CA'
+                ],
+                [
+                    'subheading' => 'I just ordered 6 months’ worth of Novamanix.',
+                    'p' => 'I work in a cruise ship, and most of the time, the opportunity is there to cozy up with one of the drunk guests. But because of my average penis, I feel like I can’t live up to their expectations and ruin the experience for them. I had a time once with a young woman, and she laughed at the underwhelming size of my penis. Thanks to Novamanix, that’s all done and over. I gained 2.5 inches longer after taking it for 3 months. Now, I’m bringing a whole pack with me to the cruise to make the most out of the experience.',
+                    'name' => 'Pete T.',
+                    'loc' => 'Tampa, FL'
+                ],
+                [
+                    'subheading' => 'Novamanix made my penis BIG!',
+                    'p' => 'Taking Novamanix is really an entirely new experience for me. I’ve taken loads of male enhancers before, but none ever came closNovamanix Advantage. I mean, you can literally feel the rush of blood flowing to your penis. On the first day, my penis was so engorged with blood. It was so red, but it felt nice and intense. I’m pretty sure that iNovamanix Novamanix side effect, and my partner seeing my penis so angry and red even made her hornier. A few weeks is all it took to gain an inch bigger. WOW. Just, WOW!',
+                    'name' => 'Bernie A.',
+                    'loc' => 'Norfolk, VA'
+                ],
+                [
+                    'subheading' => 'I ditched Viagra when I got Novamanix.',
+                    'p' => 'My doctor gave me a prescription for Viagra, and I’ve been satisfied with that for the longest time. At times I feel a bit woozy and lightheaded, but the label said that it’s what I should expect after taking Viagra. An old friend from high school recommended that I take Novamanix and ditch Viagra, and so I did. After I took the first pill, I felt the difference right away. It was an intense sex drive and my erections did not give me the headache and lightheadedness I usually feel with Viagra. I guess I’m sticking Novamanix Advantage now for good!',
+                    'name' => 'Ralph D.',
+                    'loc' => 'Corpus Christi, TX'
+                ],
+                [
+                    'subheading' => 'I knew he was taking penis enlargement pills!',
+                    'p' => 'I recently hooked up with an ex-boyfriend from college. We were together then for a year, and I can vividly remember every inch of his “anatomy”. While having sex with him, I noticed that his penis was really bigger than before. I mean, really big! Like it was blown up or something. I asked him about it and showed me his half-spent bottle of Novamanix. It was a nice mix of shock and pleasure for me. Wow, this stuff really works, doesn’t it? I just bought him a pack of 3’s as a gift and maybe he’ll want to see me again.',
+                    'name' => 'Amanda A.',
+                    'loc' => 'Oakland, CA'
+                ],
+                [
+                    'subheading' => 'Novamanix works for me.',
+                    'p' => 'I’ve tried a bunch of other male enhancers, but I found out quickly that I am quite sensitive to side effects. I easily get the flushes, I get sluggish, and there was this one time when I passed out after taking a Chinese ‘penis enlargement’ pill. Novamanix was really different. You can tell that it comes in a bit strong after the first pill, but it didn’t cause any of the nasty side effects I usually experience with other pills. If anything, I doubt if I experiencedNovamanix Advantage side effects at all. I’ve beNovamanix Novamanix now for the 8th week, and I’ve gotten about 2 inches longer, and an incNovamanix with Novamanix. Safe, effective, and affordable. What more can you ask for?',
+                    'name' => 'Randall P.',
+                    'loc' => 'Seattle, WA'
+                ],
+                [
+                    'subheading' => 'I’m buying more pills today!',
+                    'p' => 'I just ran out of Novamanix pills. I ordered a one-month pack and by the time I was halfway through, I realized that I should have taken your 3-pack or 6-pack pills to save. I mean, this stuff is really worth it. I can tell that I gained some size. I just don’t know how much, but I’m sure I got bigger. I’m now returning to the website to order more pills!',
+                    'name' => 'Will A.',
+                    'loc' => 'Austin, TX'
+                ],
+            ]
+        ]);
+    }
+
     public static function productSelection()
     {
         return ([
@@ -327,19 +430,31 @@ class LandingPageHelper
                     'image' => self::landingwebp('silver.webp'),
                     'imageSelected' => self::landingwebp('silver_selected.webp'),
                     'fallbackImage' => self::landingpng('silver.png'),
-                    'fallbackImageSelected' => self::landingpng('silver_selected.png')
+                    'fallbackImageSelected' => self::landingpng('silver_selected.png'),
+                    'imagemb' => self::landingwebp('silvermb.webp'),
+                    'imageSelectedmb' => self::landingwebp('silver_selectedmb.webp'),
+                    'fallbackImagemb' => self::landingpng('silvermb.png'),
+                    'fallbackImageSelectedmb' => self::landingpng('silver_selectedmb.png'),
                 ],
                 'product2' => [
                     'image' => self::landingwebp('gold.webp'),
                     'imageSelected' => self::landingwebp('gold_selected.webp'),
                     'fallbackImage' => self::landingpng('gold.png'),
-                    'fallbackImageSelected' => self::landingpng('gold_selected.png')
+                    'fallbackImageSelected' => self::landingpng('gold_selected.png'),
+                    'imagemb' => self::landingwebp('goldmb.webp'),
+                    'imageSelectedmb' => self::landingwebp('gold_selectedmb.webp'),
+                    'fallbackImagemb' => self::landingpng('goldmb.png'),
+                    'fallbackImageSelectedmb' => self::landingpng('gold_selectedmb.png'),
                 ],
                 'product3' => [
                     'image' => self::landingwebp('platinum.webp'),
                     'imageSelected' => self::landingwebp('platinum_selected.webp'),
                     'fallbackImage' => self::landingpng('platinum.png'),
-                    'fallbackImageSelected' => self::landingpng('platinum_selected.png')
+                    'fallbackImageSelected' => self::landingpng('platinum_selected.png'),
+                    'imagemb' => self::landingwebp('platinummb.webp'),
+                    'imageSelectedmb' => self::landingwebp('platinum_selectedmb.webp'),
+                    'fallbackImagemb' => self::landingpng('platinummb.png'),
+                    'fallbackImageSelectedmb' => self::landingpng('platinum_selectedmb.png'),
                 ],
             ]
         ]);

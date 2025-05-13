@@ -7,18 +7,25 @@
 }
 
 .subheading {
-  @apply font-semibold text-lg leading-[150%] lg:text-[22px];
+  @apply font-bold font-oswald leading-[150%] text-[30px];
 }
 
 .green-sb-text {
   @apply font-semibold text-[#03AB00] leading-[150%] text-3xl;
 }
 
+.paragraph {
+  @apply text-base font-normal tracking-normal lg:text-lg;
+}
+
+.faqp {
+  @apply leading-[150%] -tracking-[2%] font-normal text-base;
+}
+
 section {
   font-family: "Poppins", sans-serif;
   font-family: family/text;
-  letter-spacing: -2%;
-  line-height: 150%;
+  letter-spacing: 0%;
 }
 
 /* ORDER DISPLAY AND HIDE */

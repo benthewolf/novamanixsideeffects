@@ -62,8 +62,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $sec1 = LandingPageHelper::getLanderSec1();
         $prodsel = LandingPageHelper::productSelection();
+        $herolander = LandingPageHelper::getLanderHero();
+        $sec1 = LandingPageHelper::getLanderSec1();
+        $sec2 = LandingPageHelper::getLanderSec2();
+        $sec3 = LandingPageHelper::getLanderSec3();
+        $sec4 = LandingPageHelper::getLanderSec4();
+        $sec5 = LandingPageHelper::getLanderSec5();
+        $sec6 = LandingPageHelper::getLanderSec6();
         // Merge Helper's Product Images and Param Data
         $product_1 = array_merge(Yii::$app->params['product_1'], $prodsel['products']['product1']);
         $product_2 = array_merge(Yii::$app->params['product_2'], $prodsel['products']['product2']);
@@ -71,8 +77,15 @@ class SiteController extends Controller
         $loopselection = [$product_1, $product_2, $product_3,];
 
         return $this->render('index', compact(
+            'prodsel',
+            'loopselection',
+            'herolander',
             'sec1',
-            'loopselection'
+            'sec2',
+            'sec3',
+            'sec4',
+            'sec5',
+            'sec6',
         ));
     }
 

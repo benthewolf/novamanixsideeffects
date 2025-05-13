@@ -27,9 +27,9 @@ class AppAsset extends AssetBundle
             'type' => 'image/x-icon',
         ],
         'css/site.css',
-        'assets/css/tailwind.css?v=1.2',
+        'assets/css/tailwind.css',
         'css/app.css',
-        'css/tailwind-output.css?v=1.2'
+        'css/tailwind-output.css'
     ];
     public $js = [];
     public $depends = [

@@ -24,7 +24,7 @@ class Products extends Widget
     // Selected
     public $selsrc = null;
     public $selsrcMobile = null;
-    public $selFallback = null;
+    public $selfallback = null;
     public $selfallbackMobile = null;
 
     //Data attributes
@@ -80,7 +80,7 @@ class Products extends Widget
             // Selected State
             'selsrc' => $this->selsrc,
             'selsrcMobile' => $this->selsrcMobile,
-            'selFallback' => $this->selFallback,
+            'selfallback' => $this->selfallback,
             'selfallbackMobile' => $this->selfallbackMobile,
             'selected' => $this->selected,
         ]);
