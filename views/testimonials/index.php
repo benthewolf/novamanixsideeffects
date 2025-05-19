@@ -34,14 +34,14 @@
  <section>
      <div class="container mx-auto max-w-[1100px] py-[50px]">
 
-         <div class="max-w-[1110px] space-y-3 font-semibold px-5 mb-[60px]">
-             <p class="text-2xl text-center font-semibold"><?= $prodsel['bsubheading'][0] ?></p>
+         <div class="max-w-[1110px] space-y-3 font-semibold px-5 mb-[60px] lg:leading-[150%]">
+             <p class="text-2xl text-center font-semibold lg:text-4xl"><?= $prodsel['bsubheading'][0] ?></p>
 
-             <h5 class="font-semibold text-3xl text-[#03AB00] text-center"><?= $prodsel['gsubheading'][0] ?></h5>
+             <h5 class="font-semibold text-3xl text-[#03AB00] text-center lg:text-5xl"><?= $prodsel['gsubheading'][0] ?></h5>
 
-             <p class="text-2xl text-center font-semibold">Place your order on our website and get NovaManix in just a week!</p>
+             <p class="text-2xl text-center font-semibold lg:text-4xl"><?= $prodsel['bsubheading'][1] ?></p>
 
-             <h5 class="font-semibold text-3xl text-[#03AB00] text-center">100% GUARANTEED RESULTS!</h5>
+             <h5 class="font-semibold text-3xl text-[#03AB00] text-center lg:text-5xl"><?= $prodsel['gsubheading'][1] ?></h5>
 
          </div>
 

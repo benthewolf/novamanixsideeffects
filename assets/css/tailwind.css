@@ -15,7 +15,7 @@
 }
 
 .paragraph {
-  @apply text-base font-normal tracking-normal lg:text-lg;
+  @apply text-base font-normal tracking-normal;
 }
 
 .faqp {

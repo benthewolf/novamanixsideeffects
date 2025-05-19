@@ -8,15 +8,15 @@
 
  <style>
      .banner {
-         background-image: url('/images/progen/webp/herobanner.webp'), url('/images/progen/png/herobanner.png');
+         background-image: url('/images/progen/webp/herobannerv2.webp'), url('/images/progen/png/herobannerv2.png');
          background-repeat: no-repeat;
          background-size: cover;
          background-color: black;
-         background-position: 61% top;
+         background-position: 63% top;
      }
 
      .sec6 {
-         background-image: url('/images/progen/webp/herobanner.webp'), url('/images/progen/png/herobanner.png');
+         background-image: url('/images/progen/webp/herobannerv2.webp'), url('/images/progen/png/herobannerv2.png');
          background-size: cover;
          background-repeat: no-repeat;
          background-position: 57% 10%;
@@ -40,7 +40,8 @@
 
      @media (min-width: 768px) {
          .banner {
-             background-position: 70% top;
+             background-position: center center;
+             background-size: cover;
          }
      }
 
@@ -51,18 +52,16 @@
 
  <!-- Hero Page -->
 
- <section class="banner relative w-full">
-     <div class="container mx-auto max-w-[1170px] pb-[50px] px-2.5 md:px-5">
-         <div class="h-[124px] border-b-[3px] border-white w=full py-[30px]" id="sec-height">
-             <div class="flex w-full justify-between px-5">
+ <section class="banner relative w-full lg:max-h-[707px] xl:min-h-[707px]">
+     <div class="container mx-auto max-w-[1170px] pb-[50px] px-2.5 md:px-5 lg:pb-0 lg:px-0">
+         <div class="h-[124px] lg:h-[77px] border-b-[3px] border-white w-full max-lg:py-[30px]" id="sec-heightind">
+             <div class="flex w-full justify-between px-5 lg:h-full">
                  <div class="flex">
                      <img src="<?= $imagePath ?>logo.svg" alt="" class="max-w-[111.19px] lg:max-w-[159px]">
-                     <a href="#" class="self-center hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400">
-                         <span class="text-white font-bold font-oswald text-[12.59px] md:text-lg">Side Effects</span>
-                     </a>
+                     <span class="text-white font-bold font-oswald text-[12.59px] md:text-lg self-center">Side Effects</span>
                  </div>
 
-                 <div class="border-2 border-white w-[44px] h-[32px] py-[8px] px-[3px] flex flex-col justify-between items-center cursor-pointer lg:hidden" id="burger">
+                 <div class="border-2 border-white w-[44px] h-[32px] py-[8px] px-[3px] flex flex-col justify-between items-center cursor-pointer lg:hidden self-center" id="indexburg">
                      <?php for ($x = 0; $x < 3; $x++): ?>
                          <div class="rounded-full w-[22px]  bg-white border border-white"></div>
 
@@ -70,14 +69,15 @@
                  </div>
 
                  <ul class="text-white font-bold text-base gap-5 self-center hidden lg:flex">
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">HOME</a></li>
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">FAQ</a></li>
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">INGREDIENTS</a></li>
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">TESTIMONIALS</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/">HOME</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/science">SCIENCE</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/faq">FAQ</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/ingredients">INGREDIENTS</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/testimonials">TESTIMONIALS</a></li>
                  </ul>
              </div>
 
-             <div class=" h-[245px] w-full text-white py-[20px] flex-col font-roboto hidden" id="ul-list">
+             <div class=" h-[245px] w-full text-white py-[20px] flex-col font-roboto hidden" id="ul-listind">
                  <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">HOME</a href="#">
                  <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">SCIENCE</a href="#">
                  <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">FAQ</a href="#">
@@ -88,7 +88,7 @@
          </div>
 
          <div class="py-[30px] px-5 space-y-5 md:space-y-[30px] max-w-[690px] md:px-0">
-             <h2 class="font-oswald font-bold text-white text-3xl text-center md:text-start md:text-[40px] border-2 sm:border-red-600 md:border-blue-600 lg:border-green-600 xl:border-yellow-600"><?= $herolander['heading'] ?></h2>
+             <h2 class="font-oswald font-bold text-white text-3xl text-center md:text-start md:text-[40px]"><?= $herolander['heading'] ?></h2>
 
              <?php foreach ($herolander['p'] as $key => $p): ?>
 
@@ -96,8 +96,8 @@
 
              <?php endforeach; ?>
 
-             <div class="mx-auto bg-[#FFAE00] max-w-[221px] md:mx-0">
-                 <a href="#" class="font-bold w-full h-full py-[20px] px-[24px] block">Buy Novamanix Here</a>
+             <div class="mx-auto bg-[#FFAE00] max-w-[221px] md:mx-0 h-[42px]">
+                 <a href="#" class="font-bold w-full h-full flex items-center justify-center">Buy Novamanix Here</a>
              </div>
 
          </div>
@@ -252,14 +252,14 @@
  <section>
      <div class="container mx-auto max-w-[1170px] py-[50px]">
 
-         <div class="max-w-[1110px] space-y-3 font-semibold px-5 mb-[60px]">
-             <p class="text-2xl text-center font-semibold"><?= $prodsel['bsubheading'][0] ?></p>
+         <div class="max-w-[1110px] space-y-3 font-semibold px-5 mb-[60px] lg:leading-[150%]">
+             <p class="text-2xl text-center font-semibold lg:text-4xl"><?= $prodsel['bsubheading'][0] ?></p>
 
-             <h5 class="font-semibold text-3xl text-[#03AB00] text-center"><?= $prodsel['gsubheading'][0] ?></h5>
+             <h5 class="font-semibold text-3xl text-[#03AB00] text-center lg:text-5xl"><?= $prodsel['gsubheading'][0] ?></h5>
 
-             <p class="text-2xl text-center font-semibold">Place your order on our website and get NovaManix in just a week!</p>
+             <p class="text-2xl text-center font-semibold lg:text-4xl"><?= $prodsel['bsubheading'][1] ?></p>
 
-             <h5 class="font-semibold text-3xl text-[#03AB00] text-center">100% GUARANTEED RESULTS!</h5>
+             <h5 class="font-semibold text-3xl text-[#03AB00] text-center lg:text-5xl"><?= $prodsel['gsubheading'][1] ?></h5>
 
          </div>
 
@@ -327,11 +327,11 @@
  <section class="bg-[#1F1F1F]">
      <div class="container mx-auto max-w-[430px] py-[24px] px-2.5">
          <div class="max-[376px]:text-[8px] flex justify-between text-white text-sm font-semibold items-center">
-             <a href=""><span>DMCA</span></a>
+             <a href="/dmca" class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><span>DMCA</span></a>
              <div class="bg-[#FCD34D] w-[2px] h-[14px]"></div>
-             <a href=""><span>PRIVACY POLICY</span></a>
+             <a href="/privacy" class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><span>PRIVACY POLICY</span></a>
              <div class="bg-[#FCD34D] w-[2px] h-[14px]"></div>
-             <a href=""><span>TERMS & CONDITIONS</span></a>
+             <a href="/terms" class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><span>TERMS & CONDITIONS</span></a>
              <div class="bg-[#FCD34D] w-[2px] h-[14px]"></div>
              <a href=""><span>SITEMAP</span></a>
          </div>
@@ -339,7 +339,7 @@
  </section>
 
  <script>
-     document.getElementById('burger').addEventListener('click', function handleClick() {
+     document.getElementById('indexburg').addEventListener('click', function handleClick() {
          // Prevent multiple loads
          if (window.jQuery) {
              runBurgerAnimation();
@@ -356,31 +356,32 @@
      });
 
      function runBurgerAnimation() {
-         const $secheight = $('#sec-height');
-         const $ullist = $('#ul-list');
+         const $secheightind = $('#sec-heightind');
+         const $ullistind = $('#ul-listind');
 
-         if ($secheight.height() > 124) {
-             $ullist.removeClass("flex");
+         if ($secheightind.height() > 124) {
+             $ullistind.removeClass("flex");
 
-             $secheight.animate({
+             $secheightind.animate({
                  height: '124px'
              }, 500);
 
-             $ullist.animate({
+             $ullistind.animate({
                  opacity: '0%'
              }, 500, function() {
                  // After animation completes, delay 500ms before adding 'hidden'
                  setTimeout(function() {
-                     $ullist.addClass("hidden");
+                     $ullistind.addClass("hidden");
                  }, 500);
              });
+
          } else {
-             $ullist.removeClass("hidden");
-             $ullist.addClass("flex");
-             $secheight.animate({
+             $ullistind.removeClass("hidden");
+             $ullistind.addClass("flex");
+             $secheightind.animate({
                  height: '362.85px'
              }, 500);
-             $ullist.animate({
+             $ullistind.animate({
                  opacity: '100%'
              }, 500);
          }

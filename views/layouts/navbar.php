@@ -7,7 +7,7 @@
     ?>
  <style>
      .banner {
-         background-image: url('/images/progen/webp/herobanner.webp'), url('/images/progen/png/herobanner.png');
+         background-image: url('/images/progen/webp/herobannerv2.webp'), url('/images/progen/png/herobannerv2.png');
          background-repeat: no-repeat;
          background-size: cover;
          background-color: black;
@@ -40,20 +40,20 @@
                  </div>
 
                  <ul class="text-white font-bold text-base gap-5 self-center hidden lg:flex">
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">HOME</a></li>
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">SCIENCE</a></li>
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">FAQ</a></li>
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">INGREDIENTS</a></li>
-                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="">TESTIMONIALS</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/">HOME</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/science">SCIENCE</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/faq">FAQ</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/ingredients">INGREDIENTS</a></li>
+                     <li class="hover:border-b-2 border-b-2 border-transparent hover:border-yellow-400"><a href="/testimonials">TESTIMONIALS</a></li>
                  </ul>
              </div>
 
              <div class=" h-[245px] w-full text-white py-[20px] flex-col font-roboto hidden" id="ul-list">
-                 <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">HOME</a href="#">
-                 <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">SCIENCE</a href="#">
-                 <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">FAQ</a href="#">
-                 <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">INGREDIENTS</a href="#">
-                 <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">TESTIMONIALS</a href="#">
+                 <a href="/" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">HOME</a>
+                 <a href="science" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">SCIENCE</a>
+                 <a href="/ingredients" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">FAQ</a>
+                 <a href="/faq" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">INGREDIENTS</a>
+                 <a href="#" class="h-[41px] w-full text-center text-lg py-[10px] flex items-center justify-center hover:bg-[#191919]">TESTIMONIALS</a href="/testimonials">
 
              </div>
          </div>
@@ -86,7 +86,7 @@
              $ullist.removeClass("flex");
 
              $secheight.animate({
-                 height: '124px'
+                 height: '94px'
              }, 500);
 
              $ullist.animate({

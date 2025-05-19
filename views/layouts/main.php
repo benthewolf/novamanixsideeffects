@@ -5,8 +5,6 @@
 <head>
     <?php $this->registerCssFile('@web/css/tailwind-output.css'); ?>
     <?php $this->registerCssFile('@web/css/fonts.css'); ?>
-    <link rel="preload" href="/images/progen/webp/bannermb.webp" as="image">
-    <link rel="preload" href="/images/progen/webp/banner.webp" as="image">
     <!-- Google Tag Manager -->
     <script>
         let gtmLoaded = false;
